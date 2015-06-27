@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>STEGANOGRAFIA</title>
+        <meta charset="utf-8">
+        <link href='main.css' type='text/css' rel='stylesheet' />
+        <script src='sjcl.js' type='text/javascript'></script>
+        <script src="main.js"></script>
+    </head>
+    <body>
+        
+        <h1>Steganografia</h1>
+        
+        
+        <div id='main' class='section dark'>
+        <div class='step'>Wybierz plik</div>
+        <img id='preview' class='preview hide' />
+        <div class='sectionbody'>
+            <input type='file' id='file' />
+        </div>
+        </div>
+        
+          <div id='choose' class='section dark'>
+                <div class='step'>Co zrobić?</div>
+                <div class='sectionbody'>
+                    <div class='left'>
+                        <textarea id='message' class='message' maxlength='1000'
+                            placeholder='Wprowadz widomosc'></textarea>
+
+                        <button id='encode' class='submit'>Ukryj widomość</button>
+                    </div>
+                    <div class='right'>
+                        <button id='decode' class='submit'>Pokaż ukrytą widomość</button>
+                    </div>
+                </div>
+            </div>
+            <div id='reveal' class='section dark'>
+                <div class='step'>Ukryta widomość</div>
+                <div id='messageDecoded' class='sectionbody'></div>
+            </div>
+            <canvas id='canvas'></canvas>
+            <img id='output' />
+
+    </body>
+</html>
